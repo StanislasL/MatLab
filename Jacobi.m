@@ -1,0 +1,1 @@
+%MArche sur MAtlab%Input A et B de Ax=B, le S est juste initialisé, faut pas le toucher%Output la solutionA =[9 5 1; 3 8 3; 2 1 4];B = [4; 8; 2];S = [0; 0; 0];for i = 1:20  for j = 1:3    x = B(j,1)/A(j,j);    for k = 1:3      coef = A(j,k)/A(j,j);      if (k == j)        coef = 0;      end      x =x- coef*S(k,1);    end    S(j,1)=x;  endendS
